@@ -138,7 +138,7 @@ const App = () => {
       formData.append("username", username);
       formData.append("password", password);
       console.log(username,password)
-      const response = await axios.post("http://127.0.0.1:8000/token", formData)
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/token`, formData)
       // , {
         // headers: { "Content-Type": "application/x-www-form-urlencoded" },
       // });
@@ -174,7 +174,7 @@ const App = () => {
     formData.append("file", file);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/analyze/", formData, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/token`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
