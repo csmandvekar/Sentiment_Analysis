@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+textblob
+python-multipart
+pydantic
+jose
+passlib
+datetime
