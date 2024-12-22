@@ -10,22 +10,42 @@ This project provides a simple web-based interface for uploading a CSV file, ana
 - **backend.py**: The backend code that performs sentiment analysis on uploaded CSV files. The backend uses a Python-based API with FastAPI to handle file uploads and sentiment analysis.
 - **index.html**: The HTML page used for the frontend, containing the form and chart components.
 
+### API Documentation
+
+### API Overview
+
+- **API Name**: FastAPI, TextBlob
+- **Purpose**: 
+  - **FastAPI**: FastAPI is used to build the backend API for handling requests related to sentiment analysis. It is a modern, high-performance web framework that allows for fast and efficient API development.
+  - **TextBlob**: TextBlob is used for performing sentiment analysis on the text data. It provides an easy-to-use interface for classifying text sentiment as positive, neutral, or negative.
+
+### Why These APIs?
+
+- **FastAPI**: We chose FastAPI for its high performance, simplicity, and automatic generation of API documentation (Swagger UI). FastAPI allows asynchronous requests, ensuring that the application can handle multiple requests concurrently without performance degradation.
+- **TextBlob**: We chose **TextBlob** for sentiment analysis due to its simplicity, ease of integration, and efficiency in handling basic sentiment classification tasks. Given the limited time and resources available, TextBlob provided a quick solution without the need for complex model training or infrastructure setup. It is memory-efficient and fast, making it ideal for small to medium-scale projects. While more advanced models like BERT or RoBERTa may offer higher accuracy, they require significantly more computational resources and time for fine-tuning, which was not feasible for this project within the given constraints.
+
+
 ## How to Run
 
 ### Prerequisites
 
 1. **Backend Requirements**:
    - Python 3.x
-   - FastAPI (install using `pip install fastapi`)
-   - Uvicorn (install using `pip install uvicorn`)
-   - Pandas (install using `pip install pandas`)
-   - TextBlob or any other sentiment analysis library (install using `pip install textblob`)
+   - FastAPI
+   - Uvicorn
+   - Pandas
+   - TextBlob or any other sentiment analysis library
 
 2. **Frontend Requirements**:
-   - Node.js (install from [nodejs.org](https://nodejs.org/))
-   - React.js (install using `npx create-react-app sentiment-analysis-app`)
-   - Axios (install using `npm install axios`)
-   - React-Chartjs-2 (install using `npm install react-chartjs-2 chart.js`)
+   - Node.js 
+   - React.js
+   - Axios
+   - React-Chartjs-2 
+  
+You can install the dependencies using 
+```bash
+pip install -r requirements.txt
+```
 
 ### Steps to Run
 
@@ -58,12 +78,8 @@ This project provides a simple web-based interface for uploading a CSV file, ana
 3. Click on the "Analyze" button to process the file.
 4. The sentiment distribution (positive, neutral, and negative sentiments) will be displayed in a bar chart.
 
-### Custom Inputs
-
-You can modify the frontend and backend code to accept different file formats, handle additional user inputs, or adjust the sentiment analysis criteria. The current implementation uses a simple CSV file with text data and outputs sentiment results categorized as positive, neutral, and negative.
 
 ### Example CSV Format
-
 The CSV file should contain a column with text data to be analyzed. An example of the CSV format:
 
 ```csv
@@ -71,4 +87,12 @@ text
 "Good product, very satisfied!"
 "This is okay, nothing special."
 "Terrible experience, I will never buy this again."
+```
+
+### Future developments
+
+Can modify the frontend and backend code to accept different file formats, handle additional user inputs, or adjust the sentiment analysis criteria. The current implementation uses a simple CSV file with text data and outputs sentiment results categorized as positive, neutral, and negative.
+Addition functionality can be added which can show actual samples from the CSV file that the model identifies as positive, negative or neutral
+
+
  
