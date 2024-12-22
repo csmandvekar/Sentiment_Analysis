@@ -24,6 +24,38 @@ This project provides a simple web-based interface for uploading a CSV file, ana
 - **FastAPI**: We chose FastAPI for its high performance, simplicity, and automatic generation of API documentation (Swagger UI). FastAPI allows asynchronous requests, ensuring that the application can handle multiple requests concurrently without performance degradation.
 - **TextBlob**: We chose **TextBlob** for sentiment analysis due to its simplicity, ease of integration, and efficiency in handling basic sentiment classification tasks. Given the limited time and resources available, TextBlob provided a quick solution without the need for complex model training or infrastructure setup. It is memory-efficient and fast, making it ideal for small to medium-scale projects. While more advanced models like BERT or RoBERTa may offer higher accuracy, they require significantly more computational resources and time for fine-tuning, which was not feasible for this project within the given constraints.
 
+The FastAPI backend has been deployed on [Render](https://sentiment-analysis-8-wknc.onrender.com/), where the API can be accessed.
+Note: The website frontend is still under development, a basic form is used in the video for demonstration purposes. But the API is deployed and can be tested via the FastAPI documentation or Postman.
+
+## Testing the API Using Postman
+
+You can test the FastAPI API using Postman by following these steps:
+
+### 1. Launch Postman
+
+If you don't have Postman installed, download and install it from [Postman Website](https://www.postman.com/downloads/).
+
+### 2. Set Up Authorization
+
+Before making requests, you'll need to authenticate using a bearer token. The token is provided after you log in successfully.
+
+#### 2.1. Get the Access Token
+
+- **URL**: `(https://sentiment-analysis-8-wknc.onrender.com/token)` (or the deployed URL if using Render)
+- **Method**: POST
+- **Body**: x-www-form-urlencoded
+  - **Key**: `username`
+  - **Value**: chinmay
+  - **Key**: `password`
+  - **Value**: password123
+- **Headers**:
+  - Content-Type: `application/x-www-form-urlencoded`
+ 
+### Using FastAPI docs
+
+You can check the endpoints using FastAPI's inbuild docs ( `https://sentiment-analysis-8-wknc.onrender.com/docs`)
+  
+
 
 ## How to Run
 
