@@ -4,6 +4,7 @@ pandas
 textblob
 python-multipart
 pydantic
-jose
+python-jose
 passlib
 datetime
+fastapi-cors
