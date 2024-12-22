@@ -41,7 +41,7 @@ Before making requests, you'll need to authenticate using a bearer token. The to
 
 #### 2.1. Get the Access Token
 
-- **URL**: `(https://sentiment-analysis-8-wknc.onrender.com/token)` (or the deployed URL if using Render)
+- **URL**: (https://sentiment-analysis-8-wknc.onrender.com/token) (or the deployed URL if using Render)
 - **Method**: POST
 - **Body**: x-www-form-urlencoded
   - **Key**: `username`
@@ -53,7 +53,7 @@ Before making requests, you'll need to authenticate using a bearer token. The to
  
 ### Using FastAPI docs
 
-You can check the endpoints using FastAPI's inbuild docs ( `https://sentiment-analysis-8-wknc.onrender.com/docs`)
+You can check the endpoints using FastAPI's inbuild docs (https://sentiment-analysis-8-wknc.onrender.com/docs)
   
 
 
